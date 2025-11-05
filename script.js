@@ -152,4 +152,21 @@ function scrollLento(destino, duracion = 1000) {
         }, 800);
     });
 
+const phrases = [
+  '<span class="title_spans">Relajate</span> con el <span class="title_spans">Reiki</span>,',
+  '<span class="title_spans">Relajate</span> con la <span class="title_spans">Meditación</span>,',
+  '<span class="title_spans">Relajate</span> con <span class="title_spans">Magnified Healing</span>,',
+  '<span class="title_spans">Relajate</span> con <span class="title_spans">Masajes</span>,'
+];
 
+let index = 0;
+const textElement = document.getElementById("relax-text");
+
+setInterval(() => {
+  textElement.style.opacity = 0;
+  setTimeout(() => {
+    index = (index + 1) % phrases.length;
+    textElement.innerHTML = phrases[index];
+    textElement.style.opacity = 1;
+  }, 1000);
+}, 4000);

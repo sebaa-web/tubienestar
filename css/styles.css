@@ -52,7 +52,7 @@ nav {
     opacity: 0;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 1000;
     background-color: #663a4b;
 }
@@ -214,13 +214,18 @@ body {
     flex-direction: column;
 }
 
-#title {
+.relax-container {
+    transition: opacity 1s ease-in-out;
+}
+
+#relax-text {
     margin: 0 20px 0 20px;
     text-align: center;
     margin-top: 20px;
     font-size: 50px;
     font-weight: bold;
     font-family: "Itim", cursive;
+    transition: opacity 1s ease-in-out;
 }
 
 .title_spans {
@@ -533,10 +538,10 @@ footer {
 
 @media (max-width: 650px) {
     body {
-        padding-top: 220px;
+        padding-top: 143px;
     }
 
-    #title {
+    #relax-text {
         font-size: 35px;
     }
 
@@ -550,13 +555,12 @@ footer {
     }
 
     nav {
-        padding-bottom: 20px;
         align-items: center;
         justify-content: center;
     }
 
     .nav_buttons {
-        font-size: 15px;
+        display: none;
     }
 
     span {
@@ -605,7 +609,7 @@ footer {
 }
 
 @media (min-width: 1000px) {
-    #title {
+    #relax-text {
         font-size: 70px;
         padding-top: 20px;
     }
