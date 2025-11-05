@@ -542,11 +542,15 @@ footer {
     }
 
     #relax-text {
-        font-size: 35px;
+        font-size: 25px;
     }
 
     .title_spans {
-        font-size: 45px;
+        font-size: 35px;
+    }
+
+    #sub_title {
+        font-size: 18px;
     }
     
     .logo {
