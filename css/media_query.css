@@ -1,0 +1,159 @@
+@media (max-width: 720px) {
+    #map_container {
+        display: none;
+    }
+
+    #map_container_bottom {
+        display: inline-block;
+        width: 90%;
+        height: auto;
+    }
+
+    #map {
+        width: 97%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        padding-top: 143px;
+    }
+
+    #relax-text {
+        font-size: 25px;
+    }
+
+    .title_spans {
+        font-size: 35px;
+    }
+
+    #sub_title {
+        font-size: 18px;
+    }
+    
+    .logo {
+        margin: 0;
+        height: 100px;
+    }
+
+    nav {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav_buttons {
+        display: none;
+    }
+
+    span {
+        font-size: 25px;
+    }
+
+    #about_title {
+        font-size: 25px;
+    }
+
+    #about_text {
+        font-size: 18px;
+    }
+
+    #div_mikao {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #mikao_usui {
+        width: 50%;
+        max-width: 300px;
+    }
+
+    .description_p {
+        font-size: 20px;
+    }
+
+    #redy_text {
+        font-size: 25px;
+    }
+
+    #contact_us {
+        font-size: 18px;
+    }
+
+    #map_container {
+        display: none;
+    }
+
+    #map_container_bottom {
+        align-self: center;
+        display: inline-block;
+    }
+}
+
+@media (min-width: 1000px) {
+    #relax-text {
+        font-size: 70px;
+        padding-top: 20px;
+    }
+
+    .title_spans {
+        font-size: 80px;
+    }
+
+    #sub_title {
+        font-size: 40px;
+    }
+
+    span {
+        font-size: 40px;
+    }
+
+    #about_title {
+        font-size: 40px;
+    }
+
+    #about_text {
+        font-size: 25px;
+    }
+
+    #description_title {
+        font-size: 35px;
+    }
+
+    .description_p {
+        font-size: 25px;
+        flex: 1;
+    }
+
+    .description_significados {
+        font-size: 25px;
+    }
+
+    .span_light {
+        font-size: 30px;
+    }
+
+    #contact_title {
+        font-size: 40px;
+    }
+
+    label {
+        font-size: 25px;
+    }
+
+    input, textarea {
+        font-size: 20px;
+        width: 400px;
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    #map {
+        width: 430px;
+        height: 380px;
+    }
+
+    #map_container {
+        margin-right: 50px;
+    }
+}
