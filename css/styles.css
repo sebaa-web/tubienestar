@@ -281,6 +281,7 @@ body {
 /* Reiki Description Section | Main */
 
 #reiki_description_section {
+    text-align: center;
     padding: 10px;
     margin-top: 30vh;
     background-color: #663a4b;
@@ -497,6 +498,7 @@ footer {
 .footer_text {
     font-family: "Itim", cursive;
     font-size: 20px;
+    font-weight: 300;
 }
 
 #footer_links {
