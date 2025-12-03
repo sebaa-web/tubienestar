@@ -1,3 +1,5 @@
+/* Codigo creado por IA */
+
 function scrollLento(destino, duracion = 1000) {
     const inicio = window.pageYOffset;
     const final = destino.getBoundingClientRect().top + inicio;
@@ -170,3 +172,92 @@ setInterval(() => {
     textElement.style.opacity = 1;
   }, 1000);
 }, 4000);
+
+const navbar = document.getElementById("navbar");
+
+let lastScrollY = window.pageYOffset;
+let isScrollingDown = false;
+let hideTimer = null;
+
+const HIDE_DELAY = 800;        // delay para scroll suave
+const FAST_SCROLL = 50;        // umbral de velocidad para ocultar instantáneo
+const SCROLL_THRESHOLD = 5;    // evita sensibilidad a pequeños movimientos
+const SAFE_TOP = 100;          // siempre visible cerca del inicio
+
+window.addEventListener("scroll", () => {
+  const y = window.pageYOffset;
+  const delta = y - lastScrollY;
+
+  // Mantener visible cerca del inicio
+  if (y < SAFE_TOP) {
+    isScrollingDown = false;
+    if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+    navbar.classList.remove("hidden");
+    lastScrollY = y;
+    return;
+  }
+
+  if (delta > SCROLL_THRESHOLD) {
+    // Bajando
+    if (!isScrollingDown) {
+      isScrollingDown = true;
+
+      if (delta > FAST_SCROLL) {
+        // Bajada rápida → ocultar sin delay
+        navbar.classList.add("hidden");
+      } else {
+        // Bajada suave → esperar antes de ocultar
+        hideTimer = setTimeout(() => {
+          navbar.classList.add("hidden");
+        }, HIDE_DELAY);
+      }
+    }
+    // Si ya estaba bajando, no reiniciar timers
+  } else if (delta < -SCROLL_THRESHOLD) {
+    // Subiendo → mostrar inmediatamente
+    isScrollingDown = false;
+    if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+    navbar.classList.remove("hidden");
+  }
+
+  lastScrollY = y <= 0 ? 0 : y;
+});
+
+/* Fin del codigo creado por IA */
+
+/* Servicios */
+
+let servicios = [
+    {
+        id: 1,
+        nombre: "Reiki",
+        descripcion: "Sesiones de Reiki para equilibrar tu energía y promover la sanación.",
+    },
+    {
+        id: 2,
+        nombre: "Masajes",
+        descripcion: "Masajes terapéuticos para aliviar el estrés y mejorar el bienestar.",
+    },
+    {
+        id: 3,
+        nombre: "Meditacion",
+        descripcion: "Sesiones de meditación para encontrar paz interior y reducir la ansiedad.",
+    },
+    {
+        id: 4,
+        nombre: "Magnified Healing",
+        descripcion: "Terapia de Magnified Healing para sanar a nivel físico, emocional y espiritual.",
+    }
+];
+
+const serviciosContainer = document.getElementById("cards_container");
+
+servicios.forEach(servicio => {
+    const article = document.createElement("article");
+    article.classList.add("card");
+    article.innerHTML = `
+        <h3 class="card_name">${servicio.nombre}</h3>
+        <p class="card_description">${servicio.descripcion}</p>
+    `;
+    serviciosContainer.appendChild(article);
+});

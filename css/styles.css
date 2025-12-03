@@ -68,6 +68,12 @@ nav {
     opacity: 1;
 }
 
+#navbar.hidden {
+    opacity: 0;              
+    transform: translateY(-20px);
+    pointer-events: none; 
+}
+
 ul {
     display: flex;
 }
@@ -278,12 +284,74 @@ body {
     padding-right: 20px;
 }
 
+/* Nuestros Servicios */
+
+#servicios {
+    margin-top: 30vh;
+    background-color: #744758;
+}
+
+#services_title {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Itim", cursive;
+    font-size: 30px;
+}
+
+/* Cards | Servicios */
+
+#cards_container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card {
+    text-align: center;
+    padding: 20px;
+    background-color: #663a4b;
+    color: #e2c8d2;
+    width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card_name {
+    font-family: "Itim", cursive;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.card_description {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.card_info:hover {
+    background-color: #d4b8be;
+}
+
 /* Reiki Description Section | Main */
 
 #reiki_description_section {
     text-align: center;
     padding: 10px;
-    margin-top: 30vh;
+    margin-top: 100px;
     background-color: #663a4b;
 }
 
